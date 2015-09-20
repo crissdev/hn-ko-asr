@@ -1,0 +1,66 @@
+<div data-bind="switch: $component.itemType">
+
+  <!--ko case: 'story'-->
+  <div class="cko-hn-item-story">
+    <div class="cko-headline">
+      <span style="white-space: pre">{{$component.index | padLeft:2}}.</span>
+      <!--ko if: $component.url--><a href="{{$component.url}}"><span>{{$component.title}}</span></a><!--/ko-->
+      <!--ko ifnot: $component.url--><span>{{$component.title}}</span><!--/ko-->
+    </div>
+    <div class="cko-item-details">
+      <small>{{$component.score}} point{{$component.score|plural}}</small>
+      <small>by</small>
+      <a href="{{$component.by | userLink}}"><small>{{$component.by}}</small></a>
+
+      <a href="{{$component.id | itemLink}}"><small>{{$component.time | timeAgo}}</small></a>
+
+      <small> | </small>
+
+      <!--ko if: $component.kids && $component.kids.length > 0-->
+      <a href="{{$component.id | itemLink}}">
+        <small>{{$component.kids.length}} comment{{$component.kids.length|plural}}</small>
+      </a>
+      <!--/ko-->
+
+      <!--ko if: !$component.kids || $component.kids.length === 0-->
+      <small>discuss</small>
+      <!--/ko-->
+    </div>
+  </div>
+  <!--/ko-->
+
+  <!--ko case: 'comment'-->
+  <div class="cko-hn-item-comment">
+    <div class="cko-item-details">
+      <i class="fa fa-caret-up"></i>
+      <a href="{{$component.by | userLink}}"><small>{{$component.by}}</small></a>
+      <a href="{{$component.id | itemLink}}"><small>{{$component.time | timeAgo}}</small></a>
+      <small> | </small>
+
+      <a href="{{parent | itemLink}}"><small>parent</small></a>
+      <small> on: </small>
+      <a href="{{$component.storyId | itemLink}}"><small>{{$component.storyTitle}}</small></a>
+
+      <p class="cko-comment-text">{{{ $component.text }}}</p>
+    </div>
+  </div>
+  <!--/ko-->
+
+
+  <!--ko case: 'thread'-->
+  <div class="cko-hn-item-comment">
+    <div class="cko-item-details">
+      <i class="fa fa-caret-up"></i>
+      <a href="{{$component.by | userLink}}"><small>{{$component.by}}</small></a>
+      <a href="{{$component.id | itemLink}}"><small>{{$component.time | timeAgo}}</small></a>
+
+      <!--ko if: $component.parent-->
+      <small> | </small>
+      <a href="{{$component.parent | itemLink}}"><small>parent</small></a>
+      <!--/ko-->
+
+      <p class="cko-comment-text">{{{ $component.text }}}</p>
+    </div>
+  </div>
+  <!--/ko-->
+</div>

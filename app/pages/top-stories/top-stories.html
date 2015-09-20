@@ -1,0 +1,18 @@
+<div class="cko-page-content">
+  <!--ko if: $page.busy-->
+  <i class="fa fa-2x fa-spinner fa-spin"></i>
+  <!--/ko-->
+
+  <ul class="list-unstyled" data-bind="foreach: $page.items">
+    <li style="margin-bottom: 0">
+      <!--ko component: { name: 'cko-hn-item', params: { itemType: 'story', data: $data } }-->
+      <!--/ko-->
+    </li>
+  </ul>
+
+  <!--ko ifnot: $page.busy-->
+  <div class="cko-more-section">
+    <a href="javascript:alert('Should load more items');">More</a>
+  </div>
+  <!--/ko-->
+</div>

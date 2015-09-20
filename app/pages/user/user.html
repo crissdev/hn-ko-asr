@@ -1,0 +1,26 @@
+<div class="cko-page-content">
+  <table class="cko-user-details">
+    <tbody>
+    <tr>
+      <td>user:</td>
+      <td>{{$page.userId}}</td>
+    </tr>
+    <tr>
+      <td>created:</td>
+      <td>{{$page.created | timeAgo}}</td>
+    </tr>
+    <tr>
+      <td>karma:</td>
+      <td>{{$page.karma}}</td>
+    </tr>
+    <tr>
+      <td>about:</td>
+      <td>
+        {{{$page.about}}}<br/>
+        <a class="cko-submissions-link" href="{{$page.userId | submissionsLink}}">submissions</a><br/>
+        <a class="cko-comments-link" href="{{$page.userId | threadsLink}}">comments</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

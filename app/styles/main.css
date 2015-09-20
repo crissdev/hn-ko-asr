@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body {
+  padding-top: 8px;
+}
+
+.cko-navbar {
+  padding: 2px;
+  height: 24px;
+  background-color: #ff6600;
+}
+.cko-navbar a {
+  color: #000000;
+  text-decoration: none;
+  line-height: 13px;
+}
+.cko-navbar a.active {
+  color: #ffffff;
+  cursor: default;
+}
+.cko-navbar a::before {
+  content: '|';
+  padding-right: 10px;
+  color: #000000;
+}
+.cko-navbar a.cko-no-divider::after {
+  padding-left: 0;
+  content: '';
+}
+.cko-navbar .cko-title {
+  color: #000000;
+  margin-right: 10px;
+}
+.cko-navbar .cko-title > strong {
+  cursor: pointer;
+}
+.cko-navbar li {
+  float: left;
+  margin-right: 5px;
+}
+.cko-navbar .cko-nh-logo {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  height: 18px;
+  width: 18px;
+  margin-top: 1px;
+  background: #ff6600 url('https://news.ycombinator.com/y18.gif') no-repeat center center scroll;
+}
+.cko-page-content {
+  background-color: #F6F6EF;
+  padding: 10px;
+  font-family: Verdana, "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+.cko-more-section {
+  margin-top: 20px;
+  border-bottom: 2px solid #ff6600;
+  padding-bottom: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 34px;
+}
+.cko-headline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+[class^="cko-hn-item-"] > .cko-headline a,
+[class^="cko-hn-item-"] > .cko-headline a:hover,
+[class^="cko-hn-item-"] > .cko-headline a:focus,
+[class^="cko-hn-item-"] > .cko-headline a:active {
+  text-decoration: none;
+  color: inherit;
+}
+[class^="cko-hn-item-"] > .cko-item-details a,
+[class^="cko-hn-item-"] > .cko-item-details a:hover,
+[class^="cko-hn-item-"] > .cko-item-details a:focus,
+[class^="cko-hn-item-"] > .cko-item-details a:active {
+  color: inherit;
+}
+.cko-item-details {
+  padding-left: 24px;
+  color: #828282;
+}
+.cko-hn-item-comment .cko-item-details {
+  padding-left: 10px;
+}
+.cko-hn-item-comment .cko-item-details .cko-comment-text {
+  padding-left: 14px;
+  font-size: smaller;
+  color: #000000
+}
+
+.cko-user-details td {
+  padding: 2px 4px;
+  vertical-align: top;
+  color: #828282;
+}
+.cko-user-details a.cko-submissions-link,
+.cko-user-details a.cko-comments-link {
+  color: #000000;
+  text-decoration: underline;
+}
+.cko-user-details a.cko-submissions-link:visited,
+.cko-user-details a.cko-comments-link:visited
+{
+  color: inherit;
+}

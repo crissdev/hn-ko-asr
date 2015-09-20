@@ -1,0 +1,37 @@
+<!-- Fork me on GitHub (Begin) -->
+<div class="hidden-xs github-fork-ribbon-wrapper right">
+  <div class="github-fork-ribbon">
+    <a href="https://github.com/crissdev/hn-ko-asr">Fork me on GitHub</a>
+  </div>
+</div>
+<!-- Fork me on GitHub (End) -->
+
+
+<div class="col-md-10 col-md-offset-1">
+
+  <!-- NavBar (Begin) -->
+  <nav class="cko-navbar clearfix">
+    <ul class="list-unstyled">
+      <li><span class="cko-nh-logo"></span></li>
+      <li class="cko-title">
+        <strong data-bind="on.click: $page.navHome()">Hacker News written in KnockoutJS</strong>
+      </li>
+      <!--ko if: $page.activePageTitle-->
+      <li class="hidden-xs">
+        <a class="active" href="javascript:;">{{$page.activePageTitle}}</a>
+      </li>
+      <!--/ko-->
+    </ul>
+  </nav>
+
+  <!--ko if: $page.activePageTitle-->
+  <div class="visible-xs text-center">
+    <strong>{{$page.activePageTitle | uppercase}}</strong>
+  </div>
+  <!--/ko-->
+
+  <!-- NavBar (End) -->
+
+
+  <ui-view></ui-view>
+</div>
