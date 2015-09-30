@@ -4,22 +4,22 @@
   "scripts": {
     "build": "browserify -t brfs -d app/index.js -o app/bundle.js",
     "start": "npm run build && live-server --open=app/index.html",
-    "watchko": "watchify -t brfs -d app/index.js -o app/bundle.js"
+    "watch": "watchify -t brfs -d app/index.js -o app/bundle.js"
   },
   "devDependencies": {
     "brfs": "^1.4.1",
-    "browserify": "^11.1.0",
+    "browserify": "^11.2.0",
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "abstract-state-router": "^5.5.0",
+    "abstract-state-router": "^5.7.1",
     "domready": "^1.0.8",
-    "firebase": "^2.2.9",
+    "firebase": "^2.3.0",
     "knockout": "^3.3.0",
     "knockout-state-renderer": "^1.0.1",
     "moment": "^2.10.6",
     "native-promise-only": "^0.8.1",
-    "sanitize-html": "^1.10.0",
+    "sanitize-html": "^1.10.1",
     "underscore.string": "^3.2.2"
   }
 }

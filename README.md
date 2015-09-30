@@ -2,6 +2,8 @@
 
 Hacker News written in [Knockout](https://github.com/knockout/knockout/) using [abstract-state-router](https://github.com/TehShrike/abstract-state-router).
 
+:earth_americas: https://crissdev.github.io/hn-ko-asr/
+
 
 ### Run the app
 
